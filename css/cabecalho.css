@@ -1,25 +1,49 @@
 .cabecalho {
-    padding: 20px;
-    background-color: #f6f6f6;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2.5rem;
+	padding: 1.25rem 2rem;
+	background-color: var(--color-text, #f6f6f6);
 }
 
 .cabecalho nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	align-items: center;
+}
+
+.cabecalho .logo {
+	margin: 0.625rem;
+	width: 100%;
+	max-width: 65px;
+	height: auto;
 }
 
 .cabecalho a {
-    text-decoration: none;
-    font-size: 3vh;
-    font-weight: 600;
-    color: #000;
-    padding: 10px;
-    transition: all 0.2s ease;
+	text-decoration: none;
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: var(--color-bg, #000000);
+	padding: 0.625rem;
+	transition: all 0.2s ease;
+}
+
+.cabecalho .menu {
+	font-size: 1.25rem;
+	color: var(--color-bg, #000000);
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 15px;
+	text-decoration: none;
+	padding: 0.625rem;
 }
 
 .cabecalho .menu:hover {
-    background-color: #000;
-    color: #f6f6f6;
-    border-radius: 8px;
+	background-color: var(--color-bg, #000000);
+	color: var(--color-text, #f6f6f6);
+	border-radius: 8px;
 }
