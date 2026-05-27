@@ -1,51 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
-@import url('./cabecalho.css');
-@import url('./card.css');
-@import url('./conteudo.css');
-@import url('./rodape.css');
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap");
+@import url("./cabecalho.css");
+@import url("./conteudo.css");
+@import url("./rodape.css");
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Variáveis Globais */
+:root {
+	--font-primary: "Montserrat", sans-serif;
+	--font-accent: "Krona One", sans-serif;
+
+	--color-bg: #000000;
+	--color-text: #f6f6f6;
+
+	--transition-smooth: 0.3s ease-in-out;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    background-color: #000;
-    color: #f6f6f6;
-    font-family: 'Montserrat', sans-serif;
+	font-family: var(--font-primary);
+	background-color: var(--color-bg);
+	color: var(--color-text);
 }
 
+.cabecalho,
+.cabecalho a,
+.card,
+.menu {
+	transition: var(--transition-smooth);
+}
 
 .menu:hover {
-    background-color: #000;
-    color: #f6f6f6;
+	color: var(--color-text);
+	background-color: var(--color-bg);
 }
 
 .logo {
-    max-width: 65px;
+	width: 100%;
+	max-width: 65px;
+	height: auto;
 }
 
+/* Breakpoints */
 @media only screen and (max-width: 768px) {
-    .cabecalho {
-        padding: 20px 10px;
-        transition: 1s;
-    }
+	.cabecalho {
+		padding: 1.25rem 0.625rem;
+	}
 
-    .card {
-        width: calc(50% - 20px);
-        transition: 1s;
-    }
+	.card {
+		width: calc(50% - 1.25rem);
+	}
 }
 
-@media only screen and (max-width: 480px) {
-    .cabecalho a {
-        font-size: 20px;
-        transition: 1s;
-    }
+@media only screen and (max-width: 578px) {
+	.cabecalho a {
+		font-size: 1.25rem;
+	}
 
-    .card {
-        width: 100%;
-        transition: 1s;
-    }
+	.cabecalho .logo {
+		max-width: 20%;
+	}
+
+	.menu {
+		flex-direction: column;
+		font-size: 1.25rem;
+	}
+
+	.card {
+		width: 90%;
+		margin-top: 10vw;
+	}
 }
