@@ -3,7 +3,7 @@
 	flex-wrap: wrap;
 	justify-content: space-around;
 	gap: 1.875rem;
-	margin: 1.25rem 0;
+	margin: 1.25rem;
 }
 
 .card {
